@@ -15,3 +15,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+var registroForm = document.getElementById("registroForm");
+if (registroForm) {
+    registroForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        var newUser = document.getElementById("newUser").value;
+        var newPassword = document.getElementById("newPassword").value;
+        
+        // Aquí podrías añadir lógica para almacenar el usuario registrado
+        // En este ejemplo, simplemente mostramos un mensaje de éxito
+        alert("Usuario registrado: " + newUser);
+        window.location.href = "index.html";
+    });
+}
